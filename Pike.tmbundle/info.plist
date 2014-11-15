@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Pike</string>
+	<key>ordering</key>
+	<array>
+		<string>741CFB38-00FF-44B1-BB6D-DB05AC2F2D00</string>
+		<string>0D510182-279D-47D5-A3A9-C3BFF07BD97D</string>
+		<string>EDF1E95C-3D36-4AF7-9CE6-AAFF265A948B</string>
+		<string>652CADF5-6497-4B0F-8AFE-9D2C218ACF7A</string>
+		<string>346A9437-485F-4432-B3B7-2D88760F8E1C</string>
+		<string>5FC43A34-A297-44CC-8CC1-1847C4059512</string>
+		<string>CE4EA750-5DE4-468F-A812-11895809D2F5</string>
+		<string>10989C01-FEBD-4EC2-9D19-0DA30AFD6FB7</string>
+	</array>
+	<key>uuid</key>
+	<string>2BB33345-2EB9-4081-84AA-882F58CCE886</string>
+</dict>
+</plist>

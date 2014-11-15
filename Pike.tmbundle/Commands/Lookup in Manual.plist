@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>if [ `echo "$TM_CURRENT_WORD" | grep -Ev '[a-zA-Z0-9_]+'` ]; then
+	echo "Nothing to lookup (hint: place the cursor on a function name)"
+	exit 1
+fi
+
+echo "&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=\"Refresh\" content=\"0; URL=http://pike.ida.liu.se/doc/$TM_CURRENT_WORD\"&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"	</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string></string>
+	<key>name</key>
+	<string>Lookup in Manual</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pike</string>
+	<key>uuid</key>
+	<string>0D510182-279D-47D5-A3A9-C3BFF07BD97D</string>
+</dict>
+</plist>

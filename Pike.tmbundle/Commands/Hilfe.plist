@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># start up Python in debug mode using either Terminal.app or iTerm.app
+# according to the user's value for TM_TERM_PROG
+# Default to Terminal.app since that is standard.
+TP=${TM_TERM_PROG:=Terminal}
+TPI=${TM_PIKE:=pike}
+
+if [ "$TP" == iTerm ]; then
+    osascript &lt;&lt;END
+        tell application "iTerm"
+            activate
+            set myterm to (the first terminal)
+            tell myterm            
+                set mysession to (make new session at the end of sessions)
+                tell mysession
+                    exec command "/bin/bash -c \"$TPI \" " 
+                end tell
+            end tell
+        end tell
+END
+else
+    osascript  &lt;&lt;END2
+        tell application "Terminal"
+            activate
+            do script with command "$TPI"
+        end tell
+END2
+fi
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@H</string>
+	<key>name</key>
+	<string>Hilfe</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.pike</string>
+	<key>uuid</key>
+	<string>346A9437-485F-4432-B3B7-2D88760F8E1C</string>
+</dict>
+</plist>
